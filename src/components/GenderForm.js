@@ -21,7 +21,7 @@ const GenderForm = () => {
     
        <div>
       <div>
-        <h1>Select Your Gender</h1>
+        <h2>Select Your Gender</h2>
         <label>
           <input type="radio" name="gender" value="Male" checked={gender === 'Male'} onChange={handleGenderChange} />
           Male
@@ -36,7 +36,7 @@ const GenderForm = () => {
 
       {gender === 'Male' && (
         <div>
-          <label htmlFor="shirtSize"><h1>Select Your Shirt Size:</h1></label><br />
+          <label htmlFor="shirtSize"><h2>Select Your Shirt Size:</h2></label><br />
           <select id="shirtSize" value={shirtSize} onChange={handleShirtSizeChange}>
             <option value="">Select shirt size</option>
             <option value="S">Small</option>
@@ -48,7 +48,7 @@ const GenderForm = () => {
 
       {gender === 'Female' && (
         <div>
-          <label htmlFor="dressSize"><h1>Select Your Dress Size:</h1></label><br />
+          <label htmlFor="dressSize"><h2>Select Your Dress Size:</h2></label><br />
           <select id="dressSize" value={dressSize} onChange={handleDressSizeChange}>
             <option value="">Select dress size</option>
             <option value="S">2</option>
