@@ -18,14 +18,21 @@ const GenderForm = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="gender"> <h1>Select Your Gender:</h1></label> 
-      <br />
-      <select id="gender" value={gender} onChange={handleGenderChange}>
-        <option value="">Select gender</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-      </select>
+    
+       <div>
+      <div>
+        <h1>Select Your Gender</h1>
+        <label>
+          <input type="radio" name="gender" value="Male" checked={gender === 'Male'} onChange={handleGenderChange} />
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="Female" checked={gender === 'Female'} onChange={handleGenderChange} />
+          Female
+        </label>
+      </div>
+
+     
 
       {gender === 'Male' && (
         <div>
